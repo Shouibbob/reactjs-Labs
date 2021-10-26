@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+//component
+import App from './App';
+import Home from './Home/Home';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home/>
   </React.StrictMode>,
   document.getElementById('root')
 );

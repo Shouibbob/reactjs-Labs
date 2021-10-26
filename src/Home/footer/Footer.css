@@ -1,0 +1,90 @@
+footer{
+    background: hsl(216, 53%, 9%);
+    height: 25rem;
+    color: #fff;
+    position: relative;
+}
+
+.primiary{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background:rgb(84, 84, 117);
+    width: 40rem;
+    height: 55%;
+    box-shadow: 3px 4px 3px 4px rgb(61, 57, 57);
+    margin-bottom: 10rem  !important;
+    border-radius: 10px;
+    top: -7rem;
+    position: absolute;
+    margin-left: 18rem;
+}
+
+.secondry{
+    
+    width: 40rem;
+    text-align: center;
+    padding: 20px;
+    height: 80%;
+}
+
+.secondry1{
+    font-weight: bolder;
+    font-size: 26px;
+    font-family: sans-serif;
+    margin-bottom: 18px;
+}
+
+.secondry3{
+    margin-top: 13px;
+}
+
+.secondry3 input{
+    width: 19rem;
+    height: 2rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.ed2{
+    border: 20% !important;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 25px;
+    font-weight: bolder;
+    background: rgb(36, 131, 121);
+    color: #fff;
+    outline: none;
+    border: none;
+    margin-left: 2rem;
+    margin-bottom: 10px;
+}
+
+.ed2:hover{
+    background: rgb(18, 226, 226);
+    transition: 0.3s;
+}
+
+.error{
+    color: red;
+    margin-right: 16rem !important;
+    margin-bottom: 10rem !important;
+    height: 1rem;
+}
+
+.logoF{
+    width: 5rem;
+    margin-top: 10rem;
+    margin-left: 2rem;
+}
+
+.primiary2{
+    display: flex;
+    margin-top: 20px;
+    padding: 17px;
+}
+
+.second1{
+    width: 20rem;
+}
