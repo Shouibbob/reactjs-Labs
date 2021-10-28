@@ -1,0 +1,43 @@
+.prim{
+    height: 20rem;
+    width: 60rem;
+    background: rgb(76, 76, 192);
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.m-L{
+    width: 80% !important;
+}
+
+.p-t{
+    padding-top: 4rem !important;
+    margin-left: 3rem !important;
+}
+
+.bu{
+    margin-top: 2rem !important;
+    margin-left: 41rem !important;
+}
+
+.To{
+    margin-left: 32rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.Do{
+    margin-left: 37rem !important;
+}
+
+.h{
+    text-align: center;
+}
+
+.M{
+   display: flex;
+   align-items: center;
+   padding-left: 8rem;
+   padding-top: 2rem;
+}
+
