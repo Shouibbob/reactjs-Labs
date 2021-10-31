@@ -140,7 +140,6 @@ export default function RegistComponent() {
           ? "Password does not match Confirm"
           : null,
     });
-    alert(`Welcome in our webSite`);
   };
 
   return (

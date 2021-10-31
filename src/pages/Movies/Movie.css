@@ -1,0 +1,26 @@
+.movie-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto 6rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+ }
+
+ .Co{
+     padding: 2rem;
+ }
+
+ .search{
+     background-color: transparent;
+     border: 2px solid #22254b;
+     border-radius: 50px;
+     color: #fff;
+     font-family: inherit;
+     font-size: 1.2rem;
+     padding: 0.5rem 1.5rem;
+ }
+
+ .search:focus{
+     outline: none;
+
+ }

@@ -3,4 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    background-color: #22254b;
+}
+
+a{
+    color: coral !important;
 }

@@ -2,7 +2,8 @@ import "./login.css";
 import React, { useState, useEffect } from "react";
 import { Formik } from "formik";
 
-export default function LoginComponent() {
+export default function LoginComponent(props) {
+  console.log(props);
   const [showPass, setShowPass] = useState(false);
 
   const togglePassword = () => {
