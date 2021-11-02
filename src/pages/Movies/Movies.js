@@ -5,6 +5,11 @@ import { useState, useEffect } from "react";
 import Url from "../../API/axiosConfig";
 import MovieItem from "../../components/MovieItem/MovieItem";
 import axios from "axios";
+import UpdateLanguage from "../../components/UpdateLanguage/UpdateLanguage";
+import AddFavourite from "../Favourite/AddFavourites";
+import { AddFav } from "../../store/action";
+import { useDispatch, useSelector } from "react-redux";
+import RemoveFavourite from "../Favourite/RemoveFavourite";
 
 export default function Movies(props) {
   const [Movie, setMovie] = useState([]);
@@ -19,6 +24,13 @@ export default function Movies(props) {
       .then((data) => setMovie(data))
       .catch((err) => console.log(err));
   }, []);
+
+  // useEffect(() => {
+  //   const movieFavuorite = JSON.parse(
+  //     localStorage.getItem("react-movie-app-favuorite")
+  //   );
+  //   dispatch(AddFav([...movieFavuorite, Movie]));
+  // }, []);
 
   const movies = (currentPage) => {
     Url.get(
@@ -51,9 +63,29 @@ export default function Movies(props) {
     }
   };
 
+  const saveToLocalStorage = (item) => {
+    localStorage.setItem("react-movie-app-favuorite", JSON.stringify(item));
+  };
+
   const hundleOnChange = (e) => {
     console.log(e.target.value);
     setSearchTerm(e.target.value);
+  };
+
+  const newFavouriteList = useSelector((state) => state.Fav);
+  const dispatch = useDispatch();
+
+  const addFavouriteMovie = (Movie) => {
+    dispatch(AddFav([...newFavouriteList, Movie]));
+    saveToLocalStorage(newFavouriteList);
+  };
+
+  const removeFavourit = (movie) => {
+    const FavouriteList = newFavouriteList.filter(
+      (favourite) => favourite.id !== movie.id
+    );
+
+    dispatch(AddFav([...FavouriteList, movie]));
   };
 
   return (
@@ -78,6 +110,10 @@ export default function Movies(props) {
               title={movies.original_title}
               desc={movies.overview}
               vote={movies.vote_average}
+              favourit={AddFavourite}
+              removeFav={RemoveFavourite}
+              handleremove={() => removeFavourit(movies)}
+              hundlefavuoriteClick={() => addFavouriteMovie(movies)}
             />
           );
         })}

@@ -15,6 +15,7 @@ import RegistComponent from "./pages/authentecation/registration/registraion";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
 import NotFoundComponent from "./components/NotFound/NotFound";
 import Movies from "./pages/Movies/Movies";
+import FavuoriteCard from "./pages/Favourite/FavuoriteCard";
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
           <Route path="/details/:id" exact component={MovieDetails} />
           <Route path="/register" exact component={RegistComponent} />
           <Route path="/Login" exact component={LoginComponent} />
+          <Route path="/Favuorite" exact component={FavuoriteCard} />
           <Route path="*" exact component={NotFoundComponent} />
         </Switch>
       </Router>

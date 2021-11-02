@@ -1,8 +1,12 @@
 import React from "react";
 import "./MovieItem.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSt, faStar } from "@fortawesome/free-solid-svg-icons";
 //import { Link, useHistory } from "react-router-dom";
 
 export default function MovieItem(props) {
+  const FavouriteComponent = props.favourit;
+  const removFav = props.removeFav;
   //const history = useHistory();
 
   //console.log(history);
@@ -16,12 +20,13 @@ export default function MovieItem(props) {
       <img src={`${IMG_API}${props.img}`} alt="..." />
       <div className="movie-info">
         <h5>{props.title}</h5>
-        <span>{props.vote}</span>
+        <span className="badge badge-default">{props.vote}</span>
       </div>
-      <div className="movie-over">
-        <button type="button" className="btn btn-warning">
-          Watch
-        </button>
+      <div onClick={props.hundlefavuoriteClick} className="movie-over">
+        <FavouriteComponent />
+        <span onClick={props.handleremove}>
+          <removFav />
+        </span>
       </div>
     </div>
   );

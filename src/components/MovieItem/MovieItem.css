@@ -24,6 +24,10 @@
     margin: 0;
 }
 
+.M{
+    cursor: pointer;
+}
+
 .movie-over{
     color: #22254b;
     background-color: rgb(84, 84, 133);
